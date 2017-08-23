@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   </head>
+   <body>
+	   
+	  <table>
+		<% if (list.length > 0) { %>
+			<tr><td>ID.</td><td>Title</td><td>Image</td></tr>
+			<% list.forEach(function (user) { %>
+            <tr>  
+                <td><%= user.id %></td>  
+                <td><%= user.title %></td>
+                <td><img src="/uploads/<%= user.img %>" height="200" width="200"/></td>
+            </tr>                                   
+         <% }) %>
+		<% } %>
+	  </table>
+ 
+</body>
+
+</html>
